@@ -1,0 +1,26 @@
+{% extends 'html/header.html' %}
+{% block title %}details{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row mt-5 mx-2">
+		<div class="card col-md-4">
+			<h3 class="text-info">profile image</h3>
+			<div class="card-body">
+				<img src="https://forums-images.oneplus.net/attachments/741/741612-6a50d3b32acbb5386b4942b5a3cf810c.jpg"height="200px" width="200px">
+				
+			</div>
+		</div>
+		<div class="card col-md-8">
+			<h4>user_details</h4>
+			<div class="">
+				<h3><label class="text-info">username:{{d.usn}}</label></h3>
+				<h3><label>email:{{d.emi}}</label></h3>
+				<h3><label>age:{{d.age}}</label></h3>
+				<h3><label>password:{{d.pwd}}</label></h3>
+
+				
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'html/base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+	<div class="container">
+		<div class="card col-md-6 mx-auto mt-4 shadow-lg">
+			<h3 class="text-center bg-info mt-4 border rounded">Login</h3>
+			<div class="card-body">
+				<form method="POST">
+					{% csrf_token %}
+					<!-- {{ form.as_p }} -->
+					<input type="text" name="username"placeholder="enter username" class="form-control my-2">
+					<input type="password" name="password"placeholder="enter password" class="form-control my-2">
+					<div class="row">
+						<div class="col">
+							<input type="submit" value="Login" class="col-sm btn btn-dark">
+						</div>
+						<div class="col">
+					<a href="{% url 'rg' %}" class="col-sm btn btn-success">New user</a>
+						</div>
+						
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
